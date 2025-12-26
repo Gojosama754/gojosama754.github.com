@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation - Hôtel Le Littoral</title>
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="logo1.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Le Littoral</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">offres</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Réservez votre séjour</h1>
+    <p>Remplissez le formulaire ci-dessous pour réserver votre chambre</p>
+</section>
+
+<!-- CONTAINER -->
+<div class="container">
+    <main class="main">
+        <h2>Formulaire de réservation</h2>
+        <form class="reservation-form" action="#" method="POST">
+            <div class="form-row">
+                <input type="text" name="nom" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+            </div>
+
+            <div class="form-row">
+                <input type="tel" name="telephone" placeholder="Téléphone" required>
+                <select name="type_chambre"  required>
+                    <option value="">Type de chambre</option>
+                    <option value="suite">Suite</option>
+                    <option value="standard">Chambre standard</option>
+                    <option value="bungalow">Bungalow</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <input type="number" name="adultes" placeholder="Nombre d'adultes" min="1" required>
+                <input type="number" name="enfants" placeholder="Nombre d'enfants" min="0">
+            </div>
+
+            <div class="form-row">
+                <label>Date d'arrivée</label>
+                <input type="date" name="date_arrivee" required>
+                <label>Date de départ</label>
+                <input type="date" name="date_depart" required>
+            </div>
+			<div class="form-row">
+			<label >Mode de paiement:</label>
+			<input type="radio" id="cb" name="paiement" value="carte bancaire" checked>
+			<label for="cb">carte bancaire</label>
+			<input type="radio" id="paypal" name="paiement" value="paypal">
+			<label for="paypal">Paypal</label>
+			</div>
+            <textarea name="message" rows="5" placeholder="Message spécial ou demandes particulières"></textarea>
+
+            <button type="submit">Réserver maintenant</button>
+        </form>
+    </main>
+
+    <aside class="aside">
+        <h3>Contact rapide</h3>
+        <ul>
+            <li>Téléphone: +228 72 20 14 97</li>
+            <li>Email: hotel5etoile@lelittoral.tg</li>
+            <li>Adresse: Lomé, Togo</li>
+        </ul>
+
+        <h3>Localisation</h3>
+        <div class="map-container">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8558443447628!2d1.2077560735015838!3d6.150054127393475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10215f8fbf78d9d3%3A0x73e66c2c44e3df33!2sESAG-NDE!5e0!3m2!1sfr!2stg!4v1765273892633!5m2!1sfr!2stg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </aside>
+</div>
+
+<!-- FOOTER SIMPLE -->
+<footer class="footer">
+    <div class="footer-box">
+        <div class="footer-text">
+            <h3>Hôtel Le Littoral</h3>
+            <p>Un séjour inoubliable au bord de la mer. Nous offrons confort et service de qualité pour tous nos clients.</p>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Hôtel Le Littoral. Tous droits réservés.
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hôtel Le Littoral</title>
+    <link rel="stylesheet" href="style2.css">
+	<link rel="icon" href="logo1.png">
+</head>
+<body>
+ <!-- ✅ Background défilant -->
+	 <nav>
+    <div class="bg-wrapper">
+        <div class="bg-track">
+            <div class="bg bg1"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+
+            <!-- Duplication pour défilement infini -->
+            <div class="bg bg1"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+        </div>
+    </div>
+<!-- ✅ LOGO À GAUCHE -->
+    
+<!-- ✅ NAVBAR PRO -->
+<header class="navbar">
+
+    <div class="logo">
+		<div class="logo1">
+			<img src="logo3.jpeg" alt="Logo Hôtel Le Littoral">
+		</div>
+	</div>
+
+    <!-- ✅ BARRE DE RECHERCHE -->
+    <form class="search-box">
+        <input type="search" placeholder="Rechercher...">
+        <button>🔍</button>
+    </form>
+
+    <!-- ✅ MENU HAMBURGER -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="service1.html">Offres</a></li>
+        <li><a href="galerie1.html">Galerie</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+    </ul>
+</header>
+
+<!-- ✅ HERO TRANSPARENT -->
+<section class="hero">
+    <h1>Hôtel Le Littoral</h1>
+    <p>Luxe, confort et tranquillité au bord de la mer</p>
+	<div class="reserve">
+    <button href="reservation.html"> <a href="reservation.html">Réserver maintenant</a></button>
+	</div>
+</section>
+
+<!-- ✅ ZONE PRINCIPALE AVEC MAIN + ASIDE -->
+<div class="container">
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main class="main">
+        <h2>À propos de notre hôtel</h2>
+        <p>
+            L’Hôtel Le Littoral vous accueille dans un cadre moderne et paisible.
+            Nos chambres climatisées, notre restaurant et notre service de qualité
+            vous garantissent un séjour inoubliable.
+        </p>
+
+        <p>
+            Profitez de la vue sur la mer, du Wi-Fi gratuit, de la piscine,
+            et d’un personnel professionnel à votre service 24h/24.
+        </p>
+		<section class="video-section">
+        <h2>Découvrez notre hôtel</h2>
+
+        <div class="video-box">
+            <video controls>
+                <source src="site.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    </section>
+    </main>
+
+    <!-- ✅ ASIDE POUR INFOS -->
+    <aside class="aside">
+    <h3>📍 Nos Coordonnées</h3>
+
+    <p><strong>Hôtel Le Littoral</strong></p>
+
+    <p>
+        Boulevard du Mono<br>
+        Lomé – TOGO
+    </p>
+
+    <p>
+        📞 Téléphone :<br>
+        +228 72 20 14 97<br>
+        +228 93 67 24 43
+    </p>
+
+    <p>
+        ✉ Email :<br>
+        hotel5etoile@lelittoral.tg
+    </p>
+
+    <p>
+        🕒 Ouvert : 24h/24 – 7j/7
+    </p>
+</aside>
+
+
+</div>
+<footer class="footer">
+
+    <div class="footer-box">
+
+        <div class="footer-text">
+            <h3>Nous écrire rapidement</h3>
+            <p>Une question ? Une réservation ? Écrivez-nous.</p>
+        </div>
+
+        <form class="footer-form">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <input type="text" placeholder="Objet" required>
+            <textarea placeholder="Votre message" rows="3" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+    </div>
+
+    <p class="copyright">
+        © 2025 Hôtel Le Littoral – Tous droits réservés
+    </p>
+
+</footer>
+
+
+</body>
+</html>

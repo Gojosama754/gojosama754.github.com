@@ -1,0 +1,235 @@
+/**header**/
+body{
+	font-family:Arial, sans serif;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ FOND FIXE PLEIN ÉCRAN */
+.bg-wrapper {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ✅ PISTE HORIZONTALE */
+.bg-track {
+    display: flex;
+    height: 100%;
+    width: 600vw; /* 6 images */
+    animation: slidePause 36s infinite;
+}
+
+/* ✅ CHAQUE IMAGE */
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* ✅ adapte tes images 735px sans déformation */
+    flex-shrink: 0;
+}
+
+/* ✅ TES IMAGES */
+.bg1 { background-image: url("hotel1.jpg"); } /* 735x425 */
+.bg2 { background-image: url("hotel2.jpg"); } /* 735x413 */
+.bg3 { background-image: url("hotel4.jpg"); } /* 735x386 */
+
+/* ✅ ANIMATION AVEC TEMPS D’ARRÊT */
+@keyframes slidePause {
+
+    /* IMAGE 1 — arrêt */
+    0%   { transform: translateX(0); }
+    15%  { transform: translateX(0); }
+
+    /* Transition vers image 2 */
+    20%  { transform: translateX(-100vw); }
+
+    /* IMAGE 2 — arrêt */
+    35%  { transform: translateX(-100vw); }
+
+    /* Transition vers image 3 */
+    40%  { transform: translateX(-200vw); }
+
+    /* IMAGE 3 — arrêt */
+    55%  { transform: translateX(-200vw); }
+
+    /* Boucle */
+    100% { transform: translateX(-300vw); }
+}
+
+
+/* ✅ CONTENU NORMAL AU-DESSUS */
+.content {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background: rgba(0,0,0,0.45); /* voile sombre */
+    padding: 0px;
+	
+}
+
+.content h1 {
+    font-size: 48px;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.content button {
+    padding: 14px 28px;
+    border: none;
+    background: gold;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+header{
+
+}
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0d6efd;
+    padding: 15px 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+	margin-bottom:30px;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+	text-align:center;
+	padding:10px;
+}
+
+/* BOUTON HAMBURGER */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    background: white;
+    height: 3px;
+    width: 28px;
+    margin: 5px 0;
+}
+
+/* CACHER CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #0d6efd;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+
+    /* caché par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+}
+
+.menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* AFFICHER LE MENU QUAND ON CLIQUE */
+#menu-toggle:checked + .menu-icon + .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  margin:10px;
+}
+.recherche{
+	background:#ccc;
+	padding:10px;
+	margin-left:5px;
+	border-radius:10px;
+}
+#search {
+  display: bloock;
+  padding: 8px;
+  border-radius: 5px;
+  width:400px;
+  
+}
+
+.contenance{
+	display:flex;
+	padding:10px;
+	margin:10px;
+}
+main{
+	background:transparent;
+	border:2px solid rgba( 255,255,255,0.2);
+	backdrop-filter:blur(10px);
+	width:75%;
+	margin:10px;
+	border-radius:10px;
+}
+aside{
+	background:transparent;
+	border:2px solid rgba( 255,255,255,0.2);
+	backdrop-filter:blur(10px);
+	width:25%;
+	border-radius:10px;
+}

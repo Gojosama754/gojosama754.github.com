@@ -1,0 +1,364 @@
+/* ✅ RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+}
+/* ✅ FOND FIXE PLEIN ÉCRAN */
+.bg-wrapper {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ✅ PISTE HORIZONTALE */
+.bg-track {
+    display: flex;
+    height: 100%;
+    width: 600vw; /* 6 images */
+    animation: slidePause 36s infinite;
+}
+
+/* ✅ CHAQUE IMAGE */
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* ✅ adapte tes images 735px sans déformation */
+    flex-shrink: 0;
+}
+
+/* ✅ TES IMAGES */
+.bg1 { background-image: url("hotel7.jpg"); } /* 735x425 */
+.bg2 { background-image: url("hotel8.jpg"); } /* 735x413 */
+.bg3 { background-image: url("hotel9.jpg"); } /* 735x386 */
+
+/* ✅ ANIMATION AVEC TEMPS D’ARRÊT */
+@keyframes slidePause {
+
+    /* IMAGE 1 — arrêt */
+    0%   { transform: translateX(0); }
+    15%  { transform: translateX(0); }
+
+    /* Transition vers image 2 */
+    20%  { transform: translateX(-100vw); }
+
+    /* IMAGE 2 — arrêt */
+    35%  { transform: translateX(-100vw); }
+
+    /* Transition vers image 3 */
+    40%  { transform: translateX(-200vw); }
+
+    /* IMAGE 3 — arrêt */
+    55%  { transform: translateX(-200vw); }
+
+    /* Boucle */
+    100% { transform: translateX(-300vw); }
+}
+
+
+/* ✅ NAVBAR */
+.navbar {
+    position: relative;
+    z-index: 100;   /* ✅ TRÈS IMPORTANT : sort du flou */
+
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0,0,0,0.85); /* ✅ fond net */
+    color: white;
+    backdrop-filter: none; /* ✅ enlève le flou */
+}
+
+/* ✅ LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo img{
+	border-radius:50%;
+}
+
+/* ✅ BARRE DE RECHERCHE PRO */
+.search-box {
+    display: flex;
+    background: rgba(255,255,255,0.2);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    outline: none;
+    width: 180px;
+}
+
+.search-box button {
+    background: gold;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+}
+
+/* ✅ MENU HAMBURGER */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* ✅ MENU */
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0,0,0,0.85);
+    list-style: none;
+    width: 200px;
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.menu li {
+    border-bottom: 1px solid gray;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: gold;
+    color: black;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ✅ HERO TRANSPARENT */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 14px 30px;
+    background: gold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.logo1 img {
+    height: 50px;     /* taille idéale navbar */
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ✅ CONTAINER MAIN + ASIDE */
+.container {
+    display: flex;
+    gap: 40px; /* ✅ ESPACE ENTRE MAIN ET ASIDE */
+    padding: 60px;
+}
+
+/* ✅ MAIN */
+.main {
+    flex: 3;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    line-height: 1.7;
+	 backdrop-filter: blur(6px);
+}
+.video-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.video-section h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* ✅ Boîte élégante */
+.video-box {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* ✅ Vidéo bien ajustée */
+.video-box video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ✅ ASIDE */
+.aside {
+    flex: 1;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.aside ul {
+    margin-top: 15px;
+}
+
+.aside li {
+    margin-bottom: 10px;
+}
+.footer {
+    padding: 30px 60px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(20,20,20,0.85));
+    color: white;
+}
+.footer-box {
+    max-width: 900px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ✅ Texte à gauche */
+.footer-text {
+    flex: 1;
+}
+
+.footer-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.footer-text p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* ✅ Formulaire stylé à droite */
+.footer-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ✅ Champs modernes */
+.footer-form input,
+.footer-form textarea {
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    transition: all 0.3s ease;
+}
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+/* ✅ Effet focus */
+.footer-form input:focus,
+.footer-form textarea:focus {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.02);
+}
+/* ✅ Bouton élégant */
+.footer-form button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(45deg, gold, orange);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.footer-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255,165,0,0.4);
+}
+/* ✅ Bas du footer */
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+    .footer-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-form {
+        width: 100%;
+    }
+}
+
+.reserve a{
+	text-decoration:none;
+	color:black;
+	
+}
